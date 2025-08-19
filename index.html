@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Weather Forecast</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="weather-card">
+            <h1><i class="fas fa-cloud-sun"></i> Live Weather Forecast</h1>
+            
+            <div class="search-section">
+                <input type="text" id="city-input" placeholder="Enter city name...">
+                <button id="search-btn"><i class="fas fa-search"></i></button>
+                <button id="location-btn"><i class="fas fa-location-arrow"></i></button>
+            </div>
+
+            <div id="loading" class="loading hidden">
+                <i class="fas fa-spinner fa-spin"></i> Loading...
+            </div>
+
+            <div id="error-message" class="error hidden">
+                <i class="fas fa-exclamation-triangle"></i>
+                <span id="error-text"></span>
+            </div>
+
+            <div id="weather-info" class="weather-info hidden">
+                <div class="current-weather">
+                    <div class="weather-header">
+                        <h2 id="city-name"></h2>
+                        <p id="date"></p>
+                    </div>
+                    
+                    <div class="weather-main">
+                        <div class="temperature">
+                            <img id="weather-icon" src="" alt="Weather Icon">
+                            <span id="temperature">--°C</span>
+                        </div>
+                        <div class="weather-details">
+                            <p id="description"></p>
+                            <p>Feels like <span id="feels-like">--°C</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="weather-stats">
+                    <div class="stat">
+                        <i class="fas fa-eye"></i>
+                        <span>Visibility</span>
+                        <span id="visibility">-- km</span>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-tint"></i>
+                        <span>Humidity</span>
+                        <span id="humidity">--%</span>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-wind"></i>
+                        <span>Wind Speed</span>
+                        <span id="wind-speed">-- km/h</span>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-thermometer-half"></i>
+                        <span>Pressure</span>
+                        <span id="pressure">-- hPa</span>
+                    </div>
+                </div>
+
+                <div class="forecast-section">
+                    <h3>5-Day Forecast</h3>
+                    <div id="forecast-container" class="forecast-container">
+                        <!-- Forecast items will be inserted here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <footer>
+        Abdulla Bin Sohai
+    </footer>
+</body>
+</html>
